@@ -1,15 +1,17 @@
 package com.example.android_viewbinding_databinding;
 
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
 import com.example.android_viewbinding_databinding.databinding.ActivityMainBinding;
 
 /**
- Bài 2:ViewBinding in Fragment trong android #2
- https://www.youtube.com/watch?v=QcliXVGFRdw&list=PL3Ob3F0T-08bzc9z1-bRif7w58C_J7pXJ&index=2&t=1s
+ Bài 3:View Binding in Adapter RecyclerView trong Android
+ https://www.youtube.com/watch?v=Nv2rBNw8xdE&list=PL3Ob3F0T-08bzc9z1-bRif7w58C_J7pXJ&index=3
+
+ Sẽ hướng dẫn ViewBinding từng ItemView bên trong 1 RecyclerView trong 1 Fragment trong 1 Activity
  */
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding mActivityViewBinding ;   //  Tên Class Trùng với bên của XML+ Binding
