@@ -30,6 +30,7 @@ android {
     // Để sử dụng ViewBinding cần thêm đoạn config này
     buildFeatures {
         viewBinding true
+        dataBinding true
     }
 }
 
