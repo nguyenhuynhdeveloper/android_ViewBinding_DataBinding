@@ -10,6 +10,7 @@ import com.example.android_viewbinding_databinding.databinding.ActivityMainBindi
 /**
  Bài 2:ViewBinding in Fragment trong android #2
  https://www.youtube.com/watch?v=QcliXVGFRdw&list=PL3Ob3F0T-08bzc9z1-bRif7w58C_J7pXJ&index=2&t=1s
+ Hướng dẫn ViewBinding ở trong 1 Fragment trong 1 activity
  */
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding mActivityViewBinding ;   //  Tên Class Trùng với bên của XML+ Binding
