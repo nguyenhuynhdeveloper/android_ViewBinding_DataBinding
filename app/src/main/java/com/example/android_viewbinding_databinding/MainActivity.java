@@ -1,5 +1,6 @@
 package com.example.android_viewbinding_databinding;
 
+//import android.app.FragmentTransaction;
 //import android.databinding.DataBindingUtil;
 //import android.support.v4.app.FragmentTransaction;
 //import android.support.v7.app.AppCompatActivity;
@@ -57,8 +58,9 @@ public class MainActivity extends AppCompatActivity {
 
         View view = mActivityViewBinding.getRoot();
         setContentView(view);
+//        openMyFragment();
 
-        
+
         displayListUser();
 //        setContentView(mActivityViewBinding.getRoot());
 
@@ -86,6 +88,12 @@ public class MainActivity extends AppCompatActivity {
         list.add(new UserViewModal( "User 1", "Tay Ho Ha noi"));
         return list;
     }
+
+//    public  void openMyFragment () {
+//        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+//        fragmentTransaction.replace(R.id.content_layout, new MyFragment());
+//        fragmentTransaction.commitAllowingStateLoss();
+//    }
 
 
 }
