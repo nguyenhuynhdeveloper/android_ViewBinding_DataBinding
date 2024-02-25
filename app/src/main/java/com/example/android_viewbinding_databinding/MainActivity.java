@@ -1,5 +1,6 @@
 package com.example.android_viewbinding_databinding;
 
+//import android.app.FragmentTransaction;
 import android.databinding.DataBindingUtil;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -9,11 +10,12 @@ import android.view.View;
 import com.example.android_viewbinding_databinding.databinding.ActivityMainBinding;
 
 /**
- Bài 5: TinCoder : Khái quát về Data Binding Library trong Android - [View Binding & Data Binding - #5]
- https://www.youtube.com/watch?v=hatCiXlL5og&list=PL3Ob3F0T-08bzc9z1-bRif7w58C_J7pXJ&index=5
- Hướng dẫn sử dụng DataBinding trong 1 activity
+Bài 6:  Data Biding in Activity & Fragment with MVVM - [View Binding & Data Binding - #6]
 
- cho phép : Ánh xạ View + đưa data vào View
+ https://www.youtube.com/watch?v=XsAuJDbJ2No&t=118s
+ Hướng dẫn sử dụng DataBinding trong 1 Fragment
+
+ cho phép : Ánh xạ View + đưa data vào View Fragment
  Đưa Data vào view thông qua khai báo chứ không phải chạy chương trình
 
 
@@ -43,11 +45,18 @@ public class MainActivity extends AppCompatActivity {
 
 
         setContentView(view);
+        openMyFragment();
 
 //        setContentView(mActivityViewBinding.getRoot());
 
 //        setContentView(R.layout.activity_main);
 
+    }
+
+    public  void openMyFragment () {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.content_layout, new MyFragment());
+        fragmentTransaction.commitAllowingStateLoss();
     }
 
 
