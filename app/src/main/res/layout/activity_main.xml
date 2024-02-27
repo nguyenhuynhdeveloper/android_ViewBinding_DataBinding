@@ -27,7 +27,7 @@
         android:text = "@{MainViewModal.name}"
 
         />
-
+<!--Cách 1: method reference : Cần tham số View -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
         android:text = "Button 1"
         />
 
-
+<!--Cách 2: listener Binding : Có 1 tham số đơn giản String -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,7 +44,7 @@
         android:onClick="@{() -> MainViewModal.showLongMessage2(MainViewModal.name)}"
         android:text = "Button 2"
         />
-
+<!-- Trường hợp có sử dụng  tới view thì thêm tham số View vào , để có thể sử dụng view đó để thao tác với View  -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,7 +52,10 @@
         android:onClick="@{(view) -> MainViewModal.showLongMessage3(view, MainViewModal.name)}"
         android:text = "Button 3"
         />
-
+<!-- Tham số là 1 object ,
+Viết ở đây thì viết kiểu dữ liệu vào cho tham số
+        android:onClick="@{() -> MainViewModal.showLongMessage4(use)}"  // Viết như này cũng không được
+Ở ther data hoàn toàn có thể thêm nhiều variable , -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

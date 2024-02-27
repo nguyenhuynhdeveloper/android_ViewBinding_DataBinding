@@ -40,6 +40,6 @@ public class MainViewModel {
     // Trường hợp cần truyền Object làm params
 
     public void showLongMessage4 (UserViewModal userViewModal) {
-        Log.e("Tincoder", userViewModal.getName());
+        Log.e("Tincoder", userViewModal.getName() + userViewModal.getAddress());
     }
 }
