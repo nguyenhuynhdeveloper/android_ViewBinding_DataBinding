@@ -6,6 +6,10 @@
     >
 
     <data>
+
+        <variable
+            name="UserViewModal"
+            type="com.example.android_viewbinding_databinding.UserViewModal" />
         <variable
             name="MainViewModal"
             type="com.example.android_viewbinding_databinding.MainViewModel" />
@@ -23,6 +27,39 @@
         android:text = "@{MainViewModal.name}"
 
         />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop = "10dp"
+        android:onClick="@{MainViewModal::showLongMessage}"
+        android:text = "Button 1"
+        />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop = "10dp"
+        android:onClick="@{() -> MainViewModal.showLongMessage2(MainViewModal.name)}"
+        android:text = "Button 2"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop = "10dp"
+        android:onClick="@{(view) -> MainViewModal.showLongMessage3(view, MainViewModal.name)}"
+        android:text = "Button 3"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop = "10dp"
+        android:onClick="@{() -> MainViewModal.showLongMessage4(UserViewModal)}"
+        android:text = "Button 4"
+        />
 <androidx.recyclerview.widget.RecyclerView
     android:id= "@+id/rcv_user"
     android:layout_width="match_parent"
@@ -37,6 +74,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
+
+
 
 
 </LinearLayout>

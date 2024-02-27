@@ -20,9 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
-  TinCoder #7 :Data Biding in Adapter RecyclerView with MVVM - [View Binding & Data Binding - #7]
+  TinCoder #8 Xử lý sự kiện với Method References trong Data Binding - [View Binding & Data Binding - #8]
 
- Hướng dẫn sử dụng DataBinding trong 1 RecyclerView
+ Hướng dẫn sử lý sự kiện khi click vào dataBinding
 
 
  cho phép : Ánh xạ View + đưa data vào View
@@ -54,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
         // Set View Model cho đối tượng DataBinding
         mActivityViewBinding.setMainViewModal(mainViewModel);
 
+        // Gán thêm giá trị cho variable
+        mActivityViewBinding.setUserViewModal(new UserViewModal("Tincoder", "android Java "));
 
 
         View view = mActivityViewBinding.getRoot();
