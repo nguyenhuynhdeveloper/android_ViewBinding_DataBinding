@@ -19,17 +19,7 @@ import com.example.android_viewbinding_databinding.databinding.ActivityMainBindi
 import java.util.ArrayList;
 import java.util.List;
 
-/**
-  TinCoder #8 Xử lý sự kiện với Method References trong Data Binding - [View Binding & Data Binding - #8]
 
- Hướng dẫn sử lý sự kiện khi click vào dataBinding
-
-
- cho phép : Ánh xạ View + đưa data vào View
- Đưa Data vào view thông qua khai báo chứ không phải chạy chương trình
-
-
- */
 public class MainActivity extends AppCompatActivity {
 
 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="Activity2ViewModal"
+            type="com.example.android_viewbinding_databinding.observable_dataBinding.Activity2ViewModal" />
+    </data>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation = "vertical"
+       >
+<!--Button được nhận hàm onClick sẽ chạy hàm changeValueTextView() của ViewModal -->
+       <Button
+           android:id="@+id/button"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Button"
+           android:onClick="@{()-> Activity2ViewModal.changeValueTextView()}"
+       />
+
+<!--       TextView được  hiển thị luôn giá trị của ViewModal-->
+       <TextView
+           android:id="@+id/textView"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@={Activity2ViewModal.message}"
+        />
+
+<!--       EditText được gắn ràng buộc 2 chiều thay đổi giá trị của trường message trong ViewModal -->
+       <EditText
+           android:id="@+id/editText"
+           android:layout_height="wrap_content"
+           android:layout_width="match_parent"
+           android:inputType="text"
+           android:text="@={Activity2ViewModal.message}"
+           />
+   </LinearLayout>
+</layout>
