@@ -1,6 +1,7 @@
 package com.example.android_viewbinding_databinding.observable_dataBinding;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.ObservableField;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -10,17 +11,9 @@ import com.example.android_viewbinding_databinding.R;
 import com.example.android_viewbinding_databinding.databinding.Activity2Binding;
 
 /**
- Bài 10:  Ràng buộc dữ liệu 1 chiều (One-way Data Binding) - [View Binding & Data Binding - #10]
+ Bài 12: Ràng buộc dữ liệu 2 chiều sử dụng phương pháp Observable fields
+ Phương pháp có cách viết ngắn gọn hơn - tường minh và dễ sử lý thao tác hơn cách viết truyền thống
 
- thay đổi logic khiên giá trị thay đổi . lập tức thay đổi hiển thị trên view
-
- Ràng buộc 1 chiểu là khi ấn vào nút nhấn thì giá trị TextView thay đổi
-
-
-
- Bài 11 : Ràng buộc dữ liệu 2 chiều (Two-way Data Binding) - [View Binding & Data Binding - #11]
- Ràng buộc 2 chiều  là : Thay đổi EditText -- giá trị của TextView thay đổi luôn
- chỉ đơn giản là thêm phần @={} vào trong phần xml
 
  */
 
@@ -34,6 +27,11 @@ private  Activity2ViewModal activity2ViewModal;
         activity2Binding = Activity2Binding.inflate(getLayoutInflater());  // Tạo 1 ViewBinding
 
         activity2ViewModal = new Activity2ViewModal("Message of Activity2ViewModal");  // Tạo 1 ViewModal
+
+        ObservableField<String> firstMessage2 =new ObservableField<>() ;  // Tạo ra 1 ObservableField
+        firstMessage2.set("First Message");   // Set giá trị cho  ObservableField đó
+        activity2ViewModal.setMessage2(firstMessage2);   // Set trường message2 cho ViewModal
+
         activity2Binding.setActivity2ViewModal(activity2ViewModal);   // Gán ViewModal vào trong  ViewBinding
 
         super.onCreate(savedInstanceState);

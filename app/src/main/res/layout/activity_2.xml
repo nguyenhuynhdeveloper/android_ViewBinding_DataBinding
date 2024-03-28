@@ -25,7 +25,7 @@
            android:id="@+id/textView"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:text="@={Activity2ViewModal.message}"
+           android:text="@={Activity2ViewModal.message2}"
         />
 
 <!--       EditText được gắn ràng buộc 2 chiều thay đổi giá trị của trường message trong ViewModal -->
@@ -34,7 +34,7 @@
            android:layout_height="wrap_content"
            android:layout_width="match_parent"
            android:inputType="text"
-           android:text="@={Activity2ViewModal.message}"
+           android:text="@={Activity2ViewModal.message2}"
            />
    </LinearLayout>
 </layout>
